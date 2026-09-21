@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECS Node.js Application</title>
+</head>
+
+<body>
+
+    <h1>ECS Node.js Application</h1>
+
+    <p>Frontend is running successfully.</p>
+
+    <button onclick="checkBackend()">Check Backend</button>
+
+    <p id="result"></p>
+
+    <script>
+        async function checkBackend() {
+            try {
+                const response = await fetch("/api/health");
+                const data = await response.json();
+
+                document.getElementById("result").innerText =
+                    JSON.stringify(data);
+            } catch (error) {
+                document.getElementById("result").innerText =
+                    "Backend connection failed";
+            }
+        }
+    </script>
+
+</body>
+</html>

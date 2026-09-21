@@ -1,0 +1,12 @@
+{
+  "name": "ecs-nodejs-frontend",
+  "version": "1.0.0",
+  "description": "Node.js frontend for ECS deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
